@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>INSIGHTS | Vivarium Strategy</title>
+    <meta name="description" content="Proprietary strategic mandates and valuation thesis by Vivarium Strategy.">
+    
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&family=Space+Mono&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- GLOBAL STYLES (Keep Consistent) --- */
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-main: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --accent: #ff6b00;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg-color); color: var(--text-main); font-family: 'Inter', sans-serif; line-height: 1.6; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; color: white; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+
+        /* NAVIGATION */
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1.5rem 5%; background: rgba(18, 18, 18, 0.95);
+            border-bottom: 1px solid #333; position: sticky; top: 0; z-index: 100;
+        }
+        .logo { font-size: 1.2rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+        .logo span { color: var(--accent); }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        .nav-links a:hover { color: var(--accent); }
+
+        /* HERO SECTION */
+        .page-header {
+            padding: 8rem 5% 4rem; text-align: center; border-bottom: 1px solid #222;
+        }
+        .page-header h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+        .page-header p { font-size: 1.2rem; color: var(--text-muted); max-width: 700px; margin: 0 auto; }
+
+        /* --- INSIGHTS GRID --- */
+        .insights-section {
+            padding: 6rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+
+        /* CARD DESIGN (Looks like a File/Dossier) */
+        .mandate-card {
+            background: #0a0a0a;
+            border: 1px solid #333;
+            padding: 2rem;
+            position: relative;
+            transition: 0.4s ease;
+        }
+
+        .mandate-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        /* The "Tag" at top */
+        .mandate-meta {
+            font-family: 'Space Mono', monospace; /* Tech/Data Font */
+            font-size: 0.75rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #222;
+            padding-bottom: 10px;
+        }
+
+        .mandate-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .mandate-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+        }
+
+        /* DATA POINTS (The Flex) */
+        .data-points {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            background: #111;
+            padding: 10px;
+        }
+        .data-item span {
+            display: block;
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+        .data-item strong {
+            font-family: 'Space Mono', monospace;
+            color: #fff;
+            font-size: 1.1rem;
+        }
+
+        /* BUTTON */
+        .access-btn {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            padding: 12px;
+            border: 1px solid #444;
+            color: #fff;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .access-btn:hover {
+            background: var(--accent);
+            color: #000;
+            border-color: var(--accent);
+        }
+
+        /* FOOTER */
+        footer { text-align: center; padding: 3rem; border-top: 1px solid #333; color: var(--text-muted); font-size: 0.8rem; background: #0a0a0a; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .page-header h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="logo">VIVARIUM <span>STRATEGY</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">The Firm</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="insights.html" style="color:var(--accent);">Insights</a></li> <!-- Active -->
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="page-header">
+        <h1>MANDATES & INTELLECT</h1>
+        <p>Decoded market signals and proprietary valuation theses. We publish less than 1% of our work to protect client IP.</p>
+    </header>
+
+    <section class="insights-section">
+        <div class="insights-grid">
+            
+            <!-- CARD 1: PROJECT SOVEREIGN -->
+            <div class="mandate-card">
+                <div class="mandate-meta">
+                    <span>SECTOR: DEEP TECH</span>
+                    <span>TYPE: BUY-SIDE</span>
+                </div>
+                <h3>Project Sovereign: The MapmyIndia Arbitrage</h3>
+                <p class="mandate-desc">
+                    An institutional-grade valuation thesis identifying an event-driven catalyst (B2C Demerger) in India's geospatial monopoly. We architected a position based on "Operational Purification" and multiple expansion.
+                </p>
+                
+                <div class="data-points">
+                    <div class="data-item">
+                        <span>Entry Call</span>
+                        <strong>₹1,700</strong>
+                    </div>
+                    <div class="data-item">
+                        <span>Status</span>
+                        <strong style="color:#00ff00;">VALIDATED</strong>
+                    </div>
+                    <div class="data-item">
+                        <span>Target</span>
+                        <strong>₹2,327</strong>
+                    </div>
+                </div>
+
+                <a href="contact.html" class="access-btn">Request Access to Mandate</a>
+            </div>
+
+            <!-- CARD 2: GABRIEL (Anonymized) -->
+            <div class="mandate-card">
+                <div class="mandate-meta">
+                    <span>SECTOR: MANUFACTURING</span>
+                    <span>TYPE: TURNAROUND</span>
+                </div>
+                <h3>The Constraint Theory: Tier-1 Auto Component</h3>
+                <p class="mandate-desc">
+                    Operational optimization for a ₹2,000 Cr market cap entity. By identifying the bottleneck in the assembly line, we architected a path to increase divisional turnover from ₹600 Cr to ₹800 Cr.
+                </p>
+                
+                <div class="data-points">
+                    <div class="data-item">
+                        <span>Impact</span>
+                        <strong>+₹200 Cr</strong>
+                    </div>
+                    <div class="data-item">
+                        <span>Feedback</span>
+                        <strong style="color:var(--accent);">CERTIFIED</strong>
+                    </div>
+                </div>
+
+                <a href="contact.html" class="access-btn">Request Case Brief</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 VIVARIUM STRATEGY. All Rights Reserved.</p>
+        <p style="margin-top: 5px; opacity: 0.7;">A Registered MSME Enterprise.</p>
+    </footer>
+
+</body>
+</html>
