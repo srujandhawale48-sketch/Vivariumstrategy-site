@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>CAPABILITIES | Vivarium Strategy</title>
+    <meta name="description" content="Vivarium Strategy Capabilities: Corporate Turnaround, Private Equity Advisory, and Risk Architecture.">
+    
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- SAME CSS AS ABOUT PAGE FOR CONSISTENCY --- */
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-main: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --accent: #ff6b00;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg-color); color: var(--text-main); font-family: 'Inter', sans-serif; line-height: 1.6; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; color: white; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+
+        /* NAVIGATION */
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1.5rem 5%; background: rgba(18, 18, 18, 0.95);
+            border-bottom: 1px solid #333; position: sticky; top: 0; z-index: 100;
+        }
+        .logo { font-size: 1.2rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+        .logo span { color: var(--accent); }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        .nav-links a:hover { color: var(--accent); }
+
+        /* HERO SECTION */
+        .page-header {
+            padding: 8rem 5% 4rem; text-align: center; border-bottom: 1px solid #222;
+        }
+        .page-header h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+        .page-header p { font-size: 1.2rem; color: var(--text-muted); max-width: 700px; margin: 0 auto; }
+
+        /* SERVICES LAYOUT (Zig-Zag) */
+        .service-block {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 6rem 10%;
+            border-bottom: 1px solid #222;
+            gap: 4rem;
+        }
+        
+        /* Alternate direction for every second service */
+        .service-block:nth-child(even) { flex-direction: row-reverse; }
+
+        .service-text { flex: 1; }
+        .service-num { color: var(--accent); font-size: 4rem; font-family: 'Playfair Display', serif; opacity: 0.5; line-height: 1; }
+        .service-text h2 { font-size: 2.5rem; margin-bottom: 1.5rem; margin-top: -10px; }
+        .service-text p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 1.5rem; }
+        
+        .methodology-list {
+            list-style: none;
+            margin-top: 2rem;
+            border-top: 1px solid #333;
+            padding-top: 1rem;
+        }
+        .methodology-list li {
+            font-size: 0.9rem;
+            color: #fff;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        .methodology-list li::before {
+            content: "■";
+            color: var(--accent);
+            font-size: 10px;
+            margin-right: 10px;
+        }
+
+        .service-visual {
+            flex: 1;
+            height: 400px;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        /* Pseudo-graphs for visuals (CSS Art) */
+        .visual-box { width: 60%; height: 60%; border: 2px solid var(--accent); position: relative; }
+        .visual-box::after { content: ""; position: absolute; top: -10px; right: -10px; width: 100%; height: 100%; border: 1px solid #444; z-index: -1; }
+
+        /* CTA SECTION */
+        .cta-section { text-align: center; padding: 6rem 5%; }
+        .cta-section h2 { font-size: 2.5rem; margin-bottom: 2rem; }
+        .btn {
+            display: inline-block; padding: 1rem 2.5rem; border: 1px solid var(--accent);
+            color: var(--accent); font-weight: 600; letter-spacing: 1px; text-transform: uppercase;
+            transition: 0.3s;
+        }
+        .btn:hover { background: var(--accent); color: white; }
+
+        footer { text-align: center; padding: 3rem; border-top: 1px solid #333; color: var(--text-muted); font-size: 0.8rem; background: #0a0a0a; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .service-block, .service-block:nth-child(even) { flex-direction: column; padding: 4rem 5%; text-align: left; }
+            .service-visual { width: 100%; height: 250px; margin-top: 2rem; }
+            .page-header h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="logo">VIVARIUM <span>STRATEGY</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">The Firm</a></li>
+            <li><a href="services.html" style="color:var(--accent);">Services</a></li> <!-- Active -->
+            <li><a href="insights.html">Insights</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="page-header">
+        <h1>STRATEGIC CAPABILITIES</h1>
+        <p>We do not provide generic advice. We deploy proprietary frameworks derived from rigorous operational audits and risk architecture.</p>
+    </header>
+
+    <!-- SERVICE 1: OPERATIONAL BLUEPRINT -->
+    <section class="service-block" id="turnaround">
+        <div class="service-text">
+            <span class="service-num">01</span>
+            <h2>The Operational Blueprint</h2>
+            <p>Designed for large-scale manufacturing and industrial environments. We use <strong>Constraint Analysis</strong> to identify the single bottleneck limiting total throughput.</p>
+            <p>We do not focus on "cost-cutting"; we focus on "throughput velocity." By optimizing the constraint, we convert inefficiency into pure margin.</p>
+            
+            <ul class="methodology-list">
+                <li>Constraint Identification & Subordination</li>
+                <li>Inventory Velocity Optimization</li>
+                <li>Shop-floor Throughput Accounting</li>
+            </ul>
+        </div>
+        <div class="service-visual">
+            <div class="visual-box"></div> <!-- Abstract Visual -->
+        </div>
+    </section>
+
+    <!-- SERVICE 2: TRANSACTIONAL PROTOCOL -->
+    <section class="service-block" id="pe-advisory">
+        <div class="service-text">
+            <span class="service-num">02</span>
+            <h2>The Transactional Protocol</h2>
+            <p>A specialized mandate for <strong>Private Equity & Venture Capital</strong>. We provide buy-side due diligence that goes beyond the balance sheet.</p>
+            <p>Our focus is "Event-Driven Arbitrage"—identifying catalysts (Spinoffs, Demergers, Regulatory Shifts) that the market has mispriced.</p>
+            
+            <ul class="methodology-list">
+                <li>Commercial Due Diligence (CDD)</li>
+                <li>Valuation Modeling (Beta-Adjusted WACC)</li>
+                <li>Exit Strategy Architecture</li>
+            </ul>
+        </div>
+        <div class="service-visual">
+            <div class="visual-box" style="border-color: #fff;"></div>
+        </div>
+    </section>
+
+    <!-- SERVICE 3: SURVIVAL MECHANISM -->
+    <section class="service-block" id="risk">
+        <div class="service-text">
+            <span class="service-num">03</span>
+            <h2>The Survival Mechanism</h2>
+            <p><strong>Corporate Turnaround</strong> for organizations facing existential threats. When the runway ends, standard rules do not apply.</p>
+            <p>We take temporary stewardship of the strategic direction to execute radical "Operational Purification"—cutting non-core assets to save the core entity.</p>
+            
+            <ul class="methodology-list">
+                <li>Liquidity Crisis Management</li>
+                <li>Entity Restructuring (Carve-outs)</li>
+                <li>Stakeholder Negotiation Strategy</li>
+            </ul>
+        </div>
+        <div class="service-visual">
+            <div class="visual-box" style="border-color: #333; background: #222;"></div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <h2>Ready to Deploy?</h2>
+        <a href="contact.html" class="btn">Initiate Engagement</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 VIVARIUM STRATEGY. All Rights Reserved.</p>
+        <p style="margin-top: 5px; opacity: 0.7;">A Registered MSME Enterprise.</p>
+    </footer>
+
+</body>
+</html>
